@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class doctor extends Model {}
+class Doctor extends Model {}
 
 doctor.init(
   {
@@ -48,4 +48,4 @@ doctor.init(
   }
 );
   
-  module.exports = doctor;
+  module.exports = Doctor;
