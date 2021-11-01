@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const userRoutes = require('./patientRoutes');
-const projectRoutes = require('./doctorRoutes');
+const patientRoutes = require('../../Project_2_test/controllers/api/patientRoutes');
+const doctorRoutes = require('../../Project_2_test/controllers/api/doctorRoutes');
 const projectRoutes = require('./appointmentRoutes');
 
 router.use('/patient', patientRoutes);
