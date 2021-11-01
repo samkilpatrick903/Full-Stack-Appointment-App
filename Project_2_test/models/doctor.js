@@ -29,8 +29,8 @@ doctor.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'gallery',
+      modelName: 'doctor',
     }
   );
   
-  module.exports = Gallery;
+  module.exports = doctor;
