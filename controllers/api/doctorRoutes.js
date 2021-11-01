@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Doctor } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const newProject = await Project.create({
+    const newProject = await Doctor.create({
       ...req.body,
       user_id: req.session.user_id,
     });
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const projectData = await Project.destroy({
+    const projectData = await Doctor.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
