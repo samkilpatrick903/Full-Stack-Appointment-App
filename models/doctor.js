@@ -48,4 +48,4 @@ doctor.init(
   }
 );
   
-  module.exports = doctor;
+  module.exports = Doctor;
