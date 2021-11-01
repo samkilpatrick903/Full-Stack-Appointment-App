@@ -4,6 +4,31 @@
     "email": "hernandez@doctor.com",
     "password" : "doctorH1"
 
+    },
+    {
+    "name":"Doctor Kilpatrick",
+    "email": "kilpatrick@doctor.com",
+    "password" : "doctorK1"
+    
+    },
+    {
+    "name":"Doctor Saguilan",
+    "email": "saguilan@doctor.com",
+    "password" : "doctorS1"
+        
+    },
+    {
+    "name":"Doctor Alvarez",
+    "email": "alvarez@doctor.com",
+    "password" : "doctorA1"
+    
+    },
+    {
+    "name":"Doctor Stephens",
+    "email": "stephens@doctor.com",
+    "password" : "doctorS2"
+    
     }
+
 
 ]
