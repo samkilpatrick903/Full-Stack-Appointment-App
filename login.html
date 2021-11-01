@@ -21,12 +21,29 @@
         
         <card class="d-flex">
             <h1>User Login</h1>
+            <form action="/action_page.php">
+                <input type="checkbox" id="patient" name="patient" value="patient">
+                <label for="patient"> PATIENT</label><br>
+                <input type="checkbox" id="doctor" name="doctor" value="doctor">
+                <label for="doctor"> DOCTOR</label><br>
+
+                <input type="text" name="username" placeholder="USERNAME">
+                <input type="text" name="username" placeholder="PASSWORD">
+
+                <input type="submit" value="Submit">
+              </form>
     
         </card>
     
         <card class="d-flex">
             <h1>Sign Up</h1>
-    
+            <form action="/action_page.php">
+                <input type="text" name="name" placeholder="NAME">
+                <input type="text" name="DOB" placeholder="D.O.B">
+                <input type="text" name="username" placeholder="USERNAME">
+                <input type="text" name="username" placeholder="PASSWORD">
+                <input type="submit" value="Submit">
+              </form>
         </card>
 </body>
 </html>
