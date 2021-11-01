@@ -11,28 +11,30 @@ appointments.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     description: {
       type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    location: {
+      type: DataTypes.STRING,
+    },
+    subject: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    calendar: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
+    start: {
+      type: DataTypes.DATE,
+      allowNull: false,
+
+    },
+    end: {
+      type: DataTypes.DATE,
+      allowNull: false,
+
     },
   },
   {
