@@ -23,7 +23,7 @@ Appointments.init(
       allowNull: false,
     },
     calendar: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     start: {

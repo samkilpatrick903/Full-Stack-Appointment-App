@@ -12,31 +12,18 @@ Doctor.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    description: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location: {
+    email: {
       type: DataTypes.STRING,
     },
-    subject: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    calendar: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
-    start: {
-      type: DataTypes.DATE,
-      allowNull: false,
 
-    },
-    end: {
-      type: DataTypes.DATE,
-      allowNull: false,
-
-    },
   },
 
   {
