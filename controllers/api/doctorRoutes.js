@@ -3,12 +3,12 @@ const { Doctor } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const newProject = await Doctor.create({
+    const newDoctor = await Doctor.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newProject);
+    res.status(200).json(newDoctor);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -16,19 +16,19 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const projectData = await Doctor.destroy({
+    const doctorData = await Doctor.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (!doctorData) {
+      res.status(404).json({ message: 'No doctor found with this id!' });
       return;
     }
 
-    res.status(200).json(projectData);
+    res.status(200).json(doctorData);
   } catch (err) {
     res.status(500).json(err);
   }
