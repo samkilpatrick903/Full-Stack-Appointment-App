@@ -5,32 +5,47 @@ const sequelize = require('../config/connection');
 class doctor extends Model {}
 
 doctor.init(
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      starting_date: {
-        type: DataTypes.DATE,
-        allowNull: false,
-      },
-      ending_date: {
-        type: DataTypes.DATE,
-        allowNull: false,
-      },
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-      sequelize,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'doctor',
-    }
-  );
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    location: {
+      type: DataTypes.STRING,
+    },
+    subject: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    calendar: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    start: {
+      type: DataTypes.DATE,
+      allowNull: false,
+
+    },
+    end: {
+      type: DataTypes.DATE,
+      allowNull: false,
+
+    },
+  },
+  
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'appointments',
+  }
+);
   
   module.exports = doctor;
