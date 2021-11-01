@@ -1,10 +1,12 @@
 const router = require('express').Router();
-const patientRoutes = require('../../Project_2_test/controllers/api/patientRoutes');
-const doctorRoutes = require('../../Project_2_test/controllers/api/doctorRoutes');
-const projectRoutes = require('./appointmentRoutes');
+const userRoutes = require('../../Project_2_test/controllers/api/userRoutes');
+const patientRoutes = require('./patientRoutes');
+const doctorRoutes = require('./doctorRoutes');
+const appointmentsRoutes = require('./appointmentsRoutes');
 
+router.use('/users', userRoutes);
 router.use('/patient', patientRoutes);
 router.use('/doctor', doctorRoutes);
-router.use('/appointment', appointmentRoutes)
+router.use('/appointments', appointmentsRoutes);
 
 module.exports = router;
