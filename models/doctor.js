@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 class Doctor extends Model {}
 
-doctor.init(
+Doctor.init(
   {
     id: {
       type: DataTypes.INTEGER,
