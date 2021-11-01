@@ -38,13 +38,13 @@ doctor.init(
 
     },
   },
-  
+
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'appointments',
+    modelName: 'doctor',
   }
 );
   
