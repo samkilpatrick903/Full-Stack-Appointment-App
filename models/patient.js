@@ -23,7 +23,6 @@ Patient.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-
   },
 
     {

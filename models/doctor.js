@@ -23,6 +23,10 @@ Doctor.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    appointment_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
 
   },
 
