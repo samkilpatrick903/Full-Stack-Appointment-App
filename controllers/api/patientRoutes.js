@@ -54,7 +54,7 @@ router.get('/', async (req, res) => {
   try {
     const patientData = await Patient.findAll({
       // be sure to include its associated Products
-      include: [{ model: Patient }],
+      include: [{ model: Appointments }],
     });
     res.status(200).json(patientData);
   } catch (err) {
@@ -67,7 +67,7 @@ router.get('/:id', async (req, res) => {
   try {
     const patientData = await Patient.findByPk(req.params.id,{
   // be sure to include its associated Products
-  include: [{ model: Patient }, {model: Appointments}],
+  include: [ {model: Appointments}],
     });
     if (patientData)
     res.status(200).json(patientData);
