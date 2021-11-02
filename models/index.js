@@ -7,8 +7,17 @@ Patient.hasMany(Appointments, {
   onDelete: 'CASCADE'
 });
 
+Doctor.hasMany(Appointments, {
+  foreignKey: 'Doctor_id',
+  onDelete: 'CASCADE'
+});
+
 Appointments.belongsTo(Patient, {
   foreignKey: 'Patient_id'
+});
+
+Appointments.belongsTo(Doctor, {
+  foreignKey: 'Doctor_id'
 });
 
 module.exports = { Patient, Appointments, Doctor };
