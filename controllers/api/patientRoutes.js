@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Patient } = require('../../models');
+const { Patient, Appointments } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -66,7 +66,7 @@ router.get('/:id', async (req, res) => {
   try {
     const patientData = await Patient.findByPk(req.params.id,{
   // be sure to include its associated Products
-  include: [{ model: Patient }],
+  include: [{ model: Patient }, {model: Appointments}],
     });
     if (patientData)
     res.status(200).json(patientData);
