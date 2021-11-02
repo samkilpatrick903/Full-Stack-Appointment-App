@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var appointments = new Array();
     var appointment1 = {
-        id: "id1",
+        id: "1",
         description: "Surgerizing",
         location: "",
         subject: "In Surgery",
