@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Appointments } = require('../../models');
+const { Appointments, Patient } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -48,4 +48,70 @@ router.post('/login', async (req, res) => {
   }
 });
 
-module.exports = router;
+router.get('/', async (req, res) => {
+  // find all appointments
+  try {
+    const appointmentsData = await Appointments.findAll({
+      // be sure to include its associated Products
+      include: [{ model: Patient }],
+    });
+    res.status(200).json(appointmentsData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/:id', async (req, res) => {
+  // find one appointment by its `id` value
+  try {
+    const appointmentsData = await Appointments.findByPk(req.params.id,{
+  // be sure to include its associated Products
+  include: [{ model: Patient }],
+    });
+    if (appointmentsData)
+    res.status(200).json(appointmentsData);
+    else {
+      res.status(400).json("Does not exist!");
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+  });
+
+  router.put('/:id', async (req, res) => {
+    // update a appointment by its `id` value
+    try {
+      const appointmentsData = await Appointments.update(req.body,{
+       where: {
+         id: req.params.id,
+       },
+      });
+      if (!appointmentsData) {
+        res.status(404).json({ message: 'No category with this id!' });
+        return;
+      }
+      res.status(200).json(appointmentsData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.delete('/:id', async (req, res) => {
+    // delete a appointment by its `id` value
+    try {
+      const appointmentsData = await Appointments.destroy({
+       where: {
+         id: req.params.id,
+       },
+      });
+      if (!appointmentsData) {
+        res.status(404).json({ message: 'No category found with that id!' });
+        return;
+      }
+      res.status(200).json(appointmentsData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+   
+  module.exports = router;
