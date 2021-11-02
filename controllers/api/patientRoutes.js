@@ -48,6 +48,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
 router.get('/', async (req, res) => {
   // find all patient
   try {
@@ -114,3 +115,4 @@ router.get('/:id', async (req, res) => {
     }
   });
    
+  module.exports = router;
