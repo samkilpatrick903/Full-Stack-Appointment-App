@@ -3,9 +3,9 @@ const patientRoutes = require('./patientRoutes');
 const doctorRoutes = require('./doctorRoutes');
 const appointmentsRoutes = require('./appointmentsRoutes');
 
-router.use('/Patient', patientRoutes);
-router.use('/Doctor', doctorRoutes);
-router.use('/Appointments', appointmentsRoutes);
+router.use('/patient', patientRoutes);
+router.use('/doctor', doctorRoutes);
+router.use('/appointments', appointmentsRoutes);
 
 module.exports = router;
 

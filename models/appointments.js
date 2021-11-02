@@ -36,6 +36,14 @@ Appointments.init(
       allowNull: false,
 
     },
+    Patient_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'patient',
+        key: 'id',
+      }
+    }
   },
   {
     sequelize,
