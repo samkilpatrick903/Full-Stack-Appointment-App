@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
 const { Appointments, Doctor, Patient } = require('../models');
 
-const appointmentsData = require('./appointments.json');
+const appointmentsData = require('./appointments.js');
 const doctorData = require('./doctor.json');
 const patientData = require('./patient.json')
 
