@@ -1,74 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Sign_in</title>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script>
-        // compile the template
-        var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
-        // execute the compiled template and print the output to the console
-        console.log(template({ doesWhat: "rocks!" }));
-    </script>
-
-    <style>
-        .login-form {
-            width: 340px;
-            margin: 50px auto;
-            font-size: 15px;
-        }
-
-        .login-form form {
-            margin-bottom: 15px;
-            background: #f7f7f7;
-            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-            height: 375px;
-            padding: 30px;
-
-        }
-
-        .login-form h2 {
-            margin: 0 0 15px;
-        }
-
-        .form-control,
-        .btn {
-            min-height: 38px;
-            border-radius: 2px;
-        }
-
-        .btn {
-            font-size: 15px;
-            font-weight: bold;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            flex-wrap: wrap;
-        }
-
-        .hero {
-            background-image: url("./Wireframe/logo.png");
-            height: 300px;
-            width: 400px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            position: absolute;
-            margin: 0 auto;
-            border: 25px solid rgb(85, 191, 240);
-        }
-    </style>
-</head>
-
-<body>
     <header class="d-flex " style="background-color: rgb(85, 191, 240); height: 150px;">
 
         <ul class="nav nav-pills navbar-right " style="font-size: 20px; margin-right: 10px;font-weight: bold;">
@@ -79,7 +9,7 @@
 
     </header>
 
-    {{!-- <p class="d-flex text-center" style="margin-top: 10px; font-size: 20px;">Description section</p>
+    <p class="d-flex text-center" style="margin-top: 10px; font-size: 20px;">Description section</p>
 
     <div class="container">
 
@@ -162,11 +92,4 @@
 
 
 
-    </footer> --}}
-
-
-
-
-</body>
-
-</html>
+    </footer>
