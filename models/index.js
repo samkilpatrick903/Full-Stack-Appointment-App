@@ -1,13 +1,23 @@
-const User = require('./User');
-const appointments = require('./appointments');
+const Patient = require('./Patient');
+const Appointments = require('./Appointments');
+const Doctor = require('./Doctor');
 
-User.hasMany(appointments, {
-  foreignKey: 'user_id',
+Patient.hasMany(Appointments, {
+  foreignKey: 'Patient_id',
   onDelete: 'CASCADE'
 });
 
-appointments.belongsTo(User, {
-  foreignKey: 'user_id'
+Doctor.hasMany(Appointments, {
+  foreignKey: 'Doctor_id',
+  onDelete: 'CASCADE'
 });
 
-module.exports = { User, appointments };
+Appointments.belongsTo(Patient, {
+  foreignKey: 'Patient_id'
+});
+
+Appointments.belongsTo(Doctor, {
+  foreignKey: 'Doctor_id'
+});
+
+module.exports = { Patient, Appointments, Doctor };

@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Appointments extends Model {}
 
-appointments.init(
+Appointments.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -23,7 +23,7 @@ appointments.init(
       allowNull: false,
     },
     calendar: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     start: {
