@@ -23,6 +23,9 @@ URL link  : ***INSERT URL HERE***
 
 
 ## Credits
+This website was built using: <br >
+Bootsrap v4.6x
+Handlebars
 
 
 
@@ -30,9 +33,17 @@ URL link  : ***INSERT URL HERE***
 MIT Licensce
 
 ## Contributions
-n/a
+Ismeny Saguilan: https://github.com/Ismeny <br >
+Chuck Stephens: https://github.com/chuck2076 <br >
+Sam Kilpatrick: https://github.com/samkilpatrick903 <br >
+Jesse Alvarez: https://github.com/Jalvarez025 <br >
+Carlos Hernandez: https://github.com/Mrher13 <br >
 ## Test
 n/a
 ## Questions
-Github: Ismeny Saguilan - https://github.com/Ismeny <br>
-Email: menysag2@gmail.com
+Have any questions or ideas on how to improve our site? Please email us: <br >
+Ismeny Saguilan: menysag2@gmail.com <br >
+Chuck Stephens: chuckstephens2076@gmail.com <br >
+Sam Kilpatrick: colecochran405@gmail.com <br >
+Jesse Alvarez: jalvarez025@yahoo.com <br >
+Carlos Hernandez: carlos.hernandez498@gmail.com <br >
