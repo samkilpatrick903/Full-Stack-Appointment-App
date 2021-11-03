@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Appointments, Patient } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const appointmentsData = await Appointments.create(req.body);
 
@@ -16,7 +17,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login', withAuth, async (req, res) => {
   try {
     const appointmentsData = await Appointments.findOne({ where: { email: req.body.email } });
 
@@ -48,7 +49,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/', async (req, res) => {
+router.get('/',withAuth, async (req, res) => {
   // find all appointments
   try {
     const appointmentsData = await Appointments.findAll({
@@ -61,7 +62,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id',withAuth, async (req, res) => {
   // find one appointment by its `id` value
   try {
     const appointmentsData = await Appointments.findByPk(req.params.id,{
@@ -78,7 +79,7 @@ router.get('/:id', async (req, res) => {
   }
   });
 
-  router.put('/:id', async (req, res) => {
+  router.put('/:id',withAuth, async (req, res) => {
     // update a appointment by its `id` value
     try {
       const appointmentsData = await Appointments.update(req.body,{
@@ -96,7 +97,7 @@ router.get('/:id', async (req, res) => {
     }
   });
 
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id',withAuth, async (req, res) => {
     // delete a appointment by its `id` value
     try {
       const appointmentsData = await Appointments.destroy({
