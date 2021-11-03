@@ -50,10 +50,10 @@ router.post('/login', async (req, res) => {
 
 
 router.get('/', async (req, res) => {
-  // find all patient
+  // find all patients
   try {
     const patientData = await Patient.findAll({
-      // be sure to include its associated Products
+      // be sure to include its associated Appointments
       include: [{ model: Appointments }],
     });
     res.status(200).json(patientData);
@@ -63,10 +63,10 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  // find one appointment by its `id` value
+  // find one patient appointment by its `id` value
   try {
     const patientData = await Patient.findByPk(req.params.id,{
-  // be sure to include its associated Products
+  // be sure to include its associated Appointments
   include: [ {model: Appointments}],
     });
     if (patientData)
@@ -112,6 +112,23 @@ router.get('/:id', async (req, res) => {
       res.status(200).json(patientData);
     } catch (err) {
       res.status(500).json(err);
+    }
+  });
+
+  //route to create new appointment
+  router.post('/', async (req, res) => {
+    try {
+      const patientData = await Patient.create({
+        description: req.body.description,
+        location: req.body.location,
+        subject: req.body.subject,
+        calendar: req.body.calendar,
+        start: req.body.start,
+        end: req.body.end
+      });
+      res.status(200).json(patientData);
+    } catch (err) {
+      res.status(400).json(err);
     }
   });
    
