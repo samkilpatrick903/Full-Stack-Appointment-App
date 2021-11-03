@@ -68,29 +68,29 @@
                     </div>
                   </div>
                 </div>
-                <nav>
-            
-                  {{{login}}}
-                  <!-- Conditionally render login or logout links -->
-                  {{#if logged_in}}
-                  <a href="/appointments">profile</a> |
-                  <button class="no-button" id="logout">logout</button>
-                  {{else}}
-                  <a href="/login">login</a>
-                  {{/if}}
-                </nav>
-                </header>
-                <main class="container container-fluid mt-5">
-                  <!-- Render the sub layout -->
-                  {{{ homepage }}}
-                </main>
-                <footer>
-            
-                </footer>
-                </div>
-            
-                <!-- Render script for logged in users only -->
-                {{#if logged_in}}
-                <script src="/js/logout.js"></script>
-                {{/if}}
-            </body>
+            </div>
+      <nav>
+        {{{login}}}
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/appointments"></a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ homepage }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
