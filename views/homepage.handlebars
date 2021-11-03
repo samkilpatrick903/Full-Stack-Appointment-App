@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Saguilan Chiropractic</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="./public/css/styles.css" rel="stylesheet" />
+    </head>
+            <!-- Sign Up Upper Text -->
+            <div class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic">"Log in or sign up to schedule an appointment with <br> one of our talented chiropractors!"</div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <nav>
+        {{{login}}}
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/appointments">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ homepage }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
 
-
-
-    <title id="Description">jqxScheduler widget displays a set of Appointments in Day, Week, Month, Timeline Day, Timeline Week and Timeline Month views
-    </title>
-    <link rel="stylesheet" href="./jq/styles/jqx.base.css" type="text/css" />
-    <link rel="stylesheet" href="./jq/styles/jqx.light.css" type="text/css" />
-    <script type="text/javascript" src="./jq/scripts/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="./jq/scripts/demos.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxdata.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxdate.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxscheduler.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxscheduler.api.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxdatetimeinput.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxmenu.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxcalendar.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxtooltip.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxwindow.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxcheckbox.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxlistbox.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxdropdownlist.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxnumberinput.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxradiobutton.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/jqxinput.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/globalization/globalize.js"></script>
-    <script type="text/javascript" src="./jq/jqwidgets/globalization/globalize.culture.de-DE.js"></script>
-    <script type="text/javascript"> </script>
-</head>
-<body class="default">
-    <div id="scheduler"></div>
-    <script src="./seeds/seeds.js"></script>
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
-</html>
