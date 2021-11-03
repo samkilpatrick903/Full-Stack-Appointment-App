@@ -7,7 +7,7 @@ const loginFormHandler = async (event) => {
 
   if (email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch('/api/patient/login', {
+    const response = await fetch('/api/patient', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/appointments');
     } else {
-      alert(response.statusText);
+      alert('Failed to log in');
     }
   }
 };
@@ -50,4 +50,4 @@ document
 
 document
   .querySelector('.login-form-2')
-  .addEventListener('click', signupFormHandler);
+  .addEventListener('submit', signupFormHandler);
