@@ -16,8 +16,6 @@ Doctor.hasMany(Appointments, {
   onDelete: 'CASCADE'
 });
 
-
-
 Appointments.belongsTo(Doctor, {
   foreignKey: 'Doctor_id'
 });

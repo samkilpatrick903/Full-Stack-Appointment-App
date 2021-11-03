@@ -119,6 +119,45 @@
   text-decoration: none;
 }
 
+/* Calendar Page */
+
+.form-label{
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #176FA6;
+  letter-spacing: .1rem;
+  display: grid;
+  place-items: center;
+}
+
+.form-inline{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  font-size: 24px;
+}
+
+
+.jumbotron{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #176FA6 !important;
+  height: 300px;
+}
+
+.scheduler{
+  justify-content: center;
+  display: flex;
+}
+
 /* Other Stuff */
 @media (prefers-reduced-motion: no-preference) {
   :root {
