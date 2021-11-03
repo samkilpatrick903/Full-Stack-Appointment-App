@@ -1,30 +1,43 @@
 const router = require('express').Router();
-//const { Gallery, Painting } = require('../models');
-// Import the custom middleware
-//const withAuth = require('../utils/auth');
 
-// GET all galleries for homepage
 router.get('/', async (req, res) => {
-  // try {
-  //   const dbGalleryData = await Gallery.findAll({
-  //     include: [
-  //       {
-  //         model: Painting,
-  //         attributes: ['filename', 'description'],
-  //       },
-  //     ],
-  //   });
-
-    // const galleries = dbGalleryData.map((gallery) =>
-    //   gallery.get({ plain: true })
-    // );
-
-    res.render('index');
-  // } catch (err) {
-  //   console.log(err);
-  //   res.status(500).json(err);
-  // }
+  res.render('index');
 });
+
+
+
+module.exports = router; 
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+// const router = require('express').Router();
+// //const { Gallery, Painting } = require('../models');
+// // Import the custom middleware
+// //const withAuth = require('../utils/auth');
+
+// // GET all galleries for homepage
+// router.get('/', async (req, res) => {
+//   // try {
+//   //   const dbGalleryData = await Gallery.findAll({
+//   //     include: [
+//   //       {
+//   //         model: Painting,
+//   //         attributes: ['filename', 'description'],
+//   //       },
+//   //     ],
+//   //   });
+
+//     // const galleries = dbGalleryData.map((gallery) =>
+//     //   gallery.get({ plain: true })
+//     // );
+
+//     res.render('index');
+//   // } catch (err) {
+//   //   console.log(err);
+//   //   res.status(500).json(err);
+//   // }
+// });
 
 // GET one gallery
 // Use the custom middleware before allowing the user to access the gallery
@@ -78,4 +91,7 @@ router.get('/', async (req, res) => {
 //   res.render('login');
 // });
 
-module.exports = router;
+///////////////////////////////////////////////////////////////////////
+
+
+
