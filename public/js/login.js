@@ -15,9 +15,9 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/appointments');
+      document.location.replace('/');
     } else {
-      alert(response.statusText);
+      alert('Failed to log in');
     }
   }
 };
@@ -37,7 +37,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/appointments');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
@@ -50,4 +50,4 @@ document
 
 document
   .querySelector('.login-form-2')
-  .addEventListener('click', signupFormHandler);
+  .addEventListener('submit', signupFormHandler);
