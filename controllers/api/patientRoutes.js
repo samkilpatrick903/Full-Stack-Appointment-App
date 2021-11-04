@@ -17,9 +17,10 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+  console.log('login')
   try {
     const patientData = await Patient.findOne({ where: { email: req.body.email } });
-
+    console.log(patientData)
     if (!patientData) {
       res
         .status(400)
@@ -28,7 +29,7 @@ router.post('/login', async (req, res) => {
     }
 
     const validPassword = await patientData.checkPassword(req.body.password);
-
+    console.log('valid password', validPassword)
     if (!validPassword) {
       res
         .status(400)
@@ -44,6 +45,7 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });

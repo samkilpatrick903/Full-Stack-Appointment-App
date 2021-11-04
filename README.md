@@ -24,7 +24,7 @@ URL link  : ***INSERT URL HERE***
 
 ## Credits
 This website was built using: <br >
-Bootsrap v4.6x
+Bootsrap v4.6x <br>
 Handlebars
 
 
