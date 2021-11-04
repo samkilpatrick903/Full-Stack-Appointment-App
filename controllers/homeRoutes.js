@@ -22,6 +22,11 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/appointments', withAuth, async (req, res) => {
+  res.render('appointments')
+});
+
+
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
