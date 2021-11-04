@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Patient, Appointments } = require('../../models');
-
+//Begin create profile route for to past new patient data if they are logged in. to be updated in further dev.
 router.post('/', async (req, res) => {
   try {
     const patientData = await Patient.create(req.body);
@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// Patient login route
 router.post('/login', async (req, res) => {
   console.log('login')
   try {
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
+// Find all patients - we did not get to front end display on this, future development for doctor use
 router.get('/', async (req, res) => {
   // find all patients
   try {
@@ -63,7 +63,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Find one patient - we did not get to front end display on this, future development for doctor use; works in insomnia!
 router.get('/:id', async (req, res) => {
   // find one patient appointment by its `id` value
   try {
@@ -80,7 +80,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
   });
-
+//Route for future dev so doctor or patient can pull info and update profile; works in insomnia!
   router.put('/:id', async (req, res) => {
     // update a patient by its `id` value
     try {

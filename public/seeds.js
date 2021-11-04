@@ -1,3 +1,4 @@
+//Initial seeds for calendar
 $(document).ready(function () {
     var appointments = new Array();
     var appointment1 = {
@@ -60,7 +61,7 @@ $(document).ready(function () {
     appointments.push(appointment4);
     appointments.push(appointment5);
     appointments.push(appointment6);
-    // prepare the data
+    // Prepare the data to be written to calendar
     var source =
     {
         dataType: "array",

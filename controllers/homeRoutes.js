@@ -21,7 +21,7 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//If successful login send patient to appointments page
 router.get('/appointments', withAuth, async (req, res) => {
   res.render('appointments')
 });

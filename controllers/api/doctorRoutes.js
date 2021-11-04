@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Doctor } = require('../../models');
-
+// Route to create a new doctor
 router.post('/', async (req, res) => {
   try {
     const newDoctor = await Doctor.create({
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+//Route to delete a doctor
 router.delete('/:id', async (req, res) => {
   try {
     const doctorData = await Doctor.destroy({
@@ -39,7 +39,7 @@ router.get('/', async (req, res) => {
   // find all doctor
   try {
     const doctorData = await Doctor.findAll({
-      // be sure to include its associated Products
+      // be sure to include their associated patients
       include: [{ model: Patient }],
     });
     res.status(200).json(doctorData);
@@ -52,7 +52,7 @@ router.get('/:id', async (req, res) => {
   // find one doctor by its `id` value
   try {
     const doctorData = await Doctor.findByPk(req.params.id,{
-  // be sure to include its associated Products
+  // be sure to include their associated patients
   include: [{ model: Patient }],
     });
     if (doctorData)
@@ -66,7 +66,7 @@ router.get('/:id', async (req, res) => {
   });
 
   router.put('/:id', async (req, res) => {
-    // update a doctor by its `id` value
+    // update a doctor by their `id` value
     try {
       const doctorData = await Doctor.update(req.body,{
        where: {

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Appointments, Patient } = require('../../models');
 const withAuth = require('../../utils/auth');
-
+//Route to create an appointment if user is logged in
 router.post('/', withAuth, async (req, res) => {
   try {
     const appointmentsData = await Appointments.create(req.body);
@@ -53,7 +53,7 @@ router.get('/',withAuth, async (req, res) => {
   // find all appointments
   try {
     const appointmentsData = await Appointments.findAll({
-      // be sure to include its associated Products
+      // be sure to include its associated patients
       include: [{ model: Patient }],
     });
     res.status(200).json(appointmentsData);
@@ -66,7 +66,7 @@ router.get('/:id',withAuth, async (req, res) => {
   // find one appointment by its `id` value
   try {
     const appointmentsData = await Appointments.findByPk(req.params.id,{
-  // be sure to include its associated Products
+  // be sure to include its associated patients
   include: [{ model: Patient }],
     });
     if (appointmentsData)

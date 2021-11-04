@@ -1,3 +1,4 @@
+//Patient/doctor profile creation form we want to develop at a later date
 const newFormHandler = async (event) => {
   event.preventDefault();
 

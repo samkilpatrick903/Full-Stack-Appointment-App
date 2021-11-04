@@ -1,3 +1,4 @@
+//Model for gathering appointment data and writing to database based on patient id
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
