@@ -6,8 +6,8 @@ $(document).ready(function () {
         location: "",
         subject: "In Surgery",
         calendar: "Doctor Hernandez ",
-        start: new Date(2021, 09, 23, 9, 0, 0),
-        end: new Date(2021, 09, 23, 16, 0, 0)
+        start: new Date(2021, 09, 28, 9, 0, 0),
+        end: new Date(2021, 09, 28, 16, 0, 0)
     }
     var appointment2 = {
         id: "id2",
@@ -15,8 +15,8 @@ $(document).ready(function () {
         location: "",
         subject: "In Patient Counseling",
         calendar: "Doctor Saguilan",
-        start: new Date(2021, 09, 24, 10, 0, 0),
-        end: new Date(2021, 09, 24, 15, 0, 0)
+        start: new Date(2021, 09, 29, 10, 0, 0),
+        end: new Date(2021, 09, 29, 15, 0, 0)
     }
     var appointment3 = {
         id: "id3",
@@ -33,8 +33,8 @@ $(document).ready(function () {
         location: "",
         subject: "Golfing",
         calendar: "Doctor Stephens",
-        start: new Date(2021, 09, 23, 16, 0, 0),
-        end: new Date(2021, 09, 23, 18, 0, 0)
+        start: new Date(2021, 09, 28, 16, 0, 0),
+        end: new Date(2021, 09, 28, 18, 0, 0)
     }
     var appointment5 = {
         id: "id5",
@@ -78,9 +78,9 @@ $(document).ready(function () {
     };
     var adapter = new $.jqx.dataAdapter(source);
     $("#scheduler").jqxScheduler({
-        date: new $.jqx.date(2021, 09, 23),
-        width: 700,
-        height: 500,
+        date: new $.jqx.date(2021, 10, 24),
+        width: 900,
+        height: 700,
         source: adapter,
         view: 'weekView',
         showLegend: true,
