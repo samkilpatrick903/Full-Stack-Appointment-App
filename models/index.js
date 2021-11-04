@@ -1,6 +1,6 @@
-const Patient = require('./Patient');
-const Appointments = require('./Appointments');
-const Doctor = require('./Doctor');
+const Patient = require('./patient');
+const Appointments = require('./appointments');
+const Doctor = require('./doctor');
 
 Patient.hasMany(Appointments, {
   foreignKey: 'Patient_id',
