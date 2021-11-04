@@ -14,9 +14,13 @@
   
 
 ## Installation
-URL link  : ***INSERT URL HERE***
+URL link  : ***INSERT URL HERE*** 
 
-![Screenshot](INSERT SCREENSHOT HERE)
+![Screenshot](assets/loginpage.png)<br>
+![Screenshot](assets/signup.png)<br>
+
+![Screenshot](assets/createappointment.png)<br>
+![Screenshot](assets/appointmentsroute.png)<br>
 
 
 ## Usage
@@ -25,25 +29,30 @@ URL link  : ***INSERT URL HERE***
 ## Credits
 This website was built using: <br >
 Bootsrap v4.6x <br>
-Handlebars
+Handlebars <br>
+jQWidgets <br>
+
 
 
 
 ## License
-MIT Licensce
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributions
-Ismeny Saguilan: https://github.com/Ismeny <br >
-Chuck Stephens: https://github.com/chuck2076 <br >
-Sam Kilpatrick: https://github.com/samkilpatrick903 <br >
-Jesse Alvarez: https://github.com/Jalvarez025 <br >
-Carlos Hernandez: https://github.com/Mrher13 <br >
+Chuck Stephens: https://github.com/chuck2076 <br>
+Ismeny Saguilan: https://github.com/Ismeny <br>
+Jesse Alvarez: https://github.com/Jalvarez025 <br>
+Carlos Hernandez: https://github.com/Mrher13 <br>
+Sam Kilpatrick: https://github.com/samkilpatrick903 <br>
+
 ## Test
 n/a
 ## Questions
-Have any questions or ideas on how to improve our site? Please email us: <br >
-Ismeny Saguilan: menysag2@gmail.com <br >
-Chuck Stephens: chuckstephens2076@gmail.com <br >
-Sam Kilpatrick: colecochran405@gmail.com <br >
-Jesse Alvarez: jalvarez025@yahoo.com <br >
-Carlos Hernandez: carlos.hernandez498@gmail.com <br >
+Have any questions or ideas on how to improve our site? Please email us: <br>
+
+Chuck Stephens: chuckstephens2076@gmail.com <br>
+Ismeny Saguilan: menysag2@gmail.com <br>
+Jesse Alvarez: jalvarez025@yahoo.com <br>
+Carlos Hernandez: carlos.hernandez498@gmail.com <br>
+Sam Kilpatrick: samkilpatrick903@gmail.com <br>
