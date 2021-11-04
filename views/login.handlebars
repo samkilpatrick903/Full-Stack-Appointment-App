@@ -1,3 +1,16 @@
+  <!-- Sign Up Upper Text -->
+            <div class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic">"Log in or sign up to schedule an appointment with <br> one of our talented chiropractors!"</div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <!-- Login Sections-->
 <div class="container login-container">
   <div class="row">
@@ -8,7 +21,7 @@
           <input
             type="text"
             class="form-control email-login"
-            placeholder="Your Email *"
+            placeholder="Your Email" type="text" id="email-login"
             value=""
           />
         </div>
@@ -16,13 +29,16 @@
           <input
             type="password"
             class="form-control password-login"
-            placeholder="Your Password *"
+            placeholder="Your Password *" type="text" id="password-login"
             value=""
           />
         </div>
-        <div class="form-group">
+        <br>
+        <div class="form-group"> 
           <input type="submit" class="btnSubmit" value="Login" />
         </div>
+
+
         <div class="form-group">
           <a href="#" class="ForgetPwd">Forget Password?</a>
         </div>
@@ -35,7 +51,7 @@
           <input
             type="text"
             class="form-control name-signup"
-            placeholder="Your Name *"
+            placeholder="Your Name *" type="text" id="name-signup"
             value=""
           /> 
         </div>
@@ -43,7 +59,7 @@
           <input
             type="text"
             class="form-control email-signup"
-            placeholder="Your Email *"
+            placeholder="Your Email *"type="text" id="email-signup"
             value=""
           />
         </div>
@@ -51,10 +67,11 @@
           <input
             type="password"
             class="form-control password-signup"
-            placeholder="Your Password *"
+            placeholder="Your Password *" type="text" id="password-signup"
             value=""
           />
         </div>
+        <br>
         <div class=".login-form-2">
           <input type="submit" class="btnSubmit" value="Sign Up" />
         </div>
@@ -62,5 +79,42 @@
     </div>
   </div>
 </div>
+
+ <!-- Testimonial section-->
+            <div class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic">"My back doesn't feel like shit anymore! This is great! Holy cow! I can't wait to see where my working back will take me next. Thanks Saguilan Chiropractic!"</div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                    <div class="fw-bold">
+                                        John Doe
+                                        <span class="fw-bold text-primary mx-1">/</span>
+                                        Once Had A Hurt Back
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; CS | IS | JA | CH | SK</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 <script src="./js/login.js"></script>
