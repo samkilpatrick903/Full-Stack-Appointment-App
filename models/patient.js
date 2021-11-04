@@ -1,3 +1,4 @@
+//Model for gathering new patient data and writing to db 
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
